@@ -5,7 +5,7 @@ using UnityEngine;
 public class Script : MonoBehaviour
 {
     public float speed = 5;
-    public Collider2D coll;
+    private bool isColliding = false;
 
     // Update is called once per frame
     void Update()
@@ -13,16 +13,16 @@ public class Script : MonoBehaviour
         Vector2 movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         transform.position += new Vector3(movement.x, movement.y, 0) * Time.deltaTime * speed;
 
-        Collider2D[] list = new Collider2D[10];
-        coll.OverlapCollider(new ContactFilter2D(), list);
+        if (Input.GetButtonDown("Jump") && isColliding)
+            Debug.Log("Oui");
+    }
 
-        foreach (Collider2D c in list)
-        {
-            GameObject g = c.gameObject;
-            if (g != null)
-            {
-                Debug.Log(g.name);
-            }
-        }
+    // Peut poser des problèmes quand on entre/sort dans plusieurs objets en même temps
+    private void OnTriggerEnter(Collider other) {
+        isColliding = true;
+    }
+
+    private void OnTriggerExit(Collider other) {
+        isColliding = false;
     }
 }
