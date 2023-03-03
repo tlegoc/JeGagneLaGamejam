@@ -20,10 +20,6 @@ public class Script : MonoBehaviour
             Debug.Log("Oui");
 
             audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
         }
     }
 
