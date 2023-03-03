@@ -24,20 +24,6 @@ public class Script : MonoBehaviour
             audioSource.PlayOneShot(jumpSound);
             audioSource.PlayOneShot(jumpSound);
             audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
-            audioSource.PlayOneShot(jumpSound);
         }
     }
 
