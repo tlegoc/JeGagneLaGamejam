@@ -11,6 +11,8 @@ public class UIScript : MonoBehaviour
     public Image image;
     public Sprite sprite;
     public GameObject panel;
+    public AudioSource audioSource;
+    public AudioClip s;
 
     // Start is called before the first frame update
     void Start()
@@ -22,5 +24,6 @@ public class UIScript : MonoBehaviour
         text.text = "Hello World";
         image.sprite = sprite;
         panel.SetActive(!panel.activeSelf);
+        audioSource.PlayOneShot(s);
     }
 }
